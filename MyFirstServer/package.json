@@ -1,0 +1,26 @@
+{
+  "name": "webserverprog1",
+  "version": "1.0.0",
+  "description": "hej",
+  "main": "app.js",
+  "scripts": {
+    "devStart": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarisDervisevic/webserverprog1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarisDervisevic/webserverprog1/issues"
+  },
+  "homepage": "https://github.com/HarisDervisevic/webserverprog1#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
