@@ -1,4 +1,5 @@
 const express = require('express')
+const Persomodel =require('Personmodel')
 const app = express()
 const port = 3000
 
@@ -24,9 +25,9 @@ app.get('/picture', (req,res) =>{res.sendFile(clientDir + "messi.jpg")})
 app.listen(port, () => console.log('Example app listening on port ${port}!'))
 
 app.post('/', (req, res) => {
-    console.log(req.body.name)
-    console.log(req.body.email)
-    const person = new Person({ name: req.body.name, email: req.body.email});
-    person.save();
+  let person =personModel.createPerson({ name: req.body.name, email: req.body.email});
+  
+  dbmodule.storeElement(person)
+  person.save();
   res.redirect('/')
 })
