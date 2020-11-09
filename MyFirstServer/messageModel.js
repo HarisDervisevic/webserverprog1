@@ -1,22 +1,22 @@
 const mongoose = require('mongoose');
 
 const messageSchema = new mongoose.Schema({
-  name: String,
+  message: String,
   email: String,
 });
 
-const message = mongoose.model('message', messageSchema);
+const Message = mongoose.model('message', messageSchema);
 
-exports.createMessage = (name, email => {
-  var message = new message({
-      name: name, 
+exports.createMessage = (message, email) => {
+  var message = new Message({
+      message: messsage, 
       email: email, 
      })
 
-     return messsage
-})
+     return message
+}
 
-exports.getAllMessage = async () => {
+exports.getAllMessages = async () => {
     let message = await message.find({})
     return message
 }
